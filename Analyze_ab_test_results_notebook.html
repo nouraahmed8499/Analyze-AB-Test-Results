@@ -15246,7 +15246,7 @@ Name: user_id, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-$$H_0:  p_{old} &gt; p_{new}$$$$H_1: p_{old} &lt;= p_{new}$$
+$$H_0:  p_{new} - p_{old} &lt;= 0$$$$H_1: p_{new} - p_{old}&gt; 0$$
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -15472,7 +15472,7 @@ $$H_0:  p_{old} &gt; p_{new}$$$$H_1: p_{old} &lt;= p_{new}$$
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.11882871103158764</pre>
+<pre>0.11887688390337899</pre>
 </div>
 
 </div>
@@ -15516,7 +15516,7 @@ $$H_0:  p_{old} &gt; p_{new}$$$$H_1: p_{old} &lt;= p_{new}$$
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.12090945385960324</pre>
+<pre>0.11969106653633824</pre>
 </div>
 
 </div>
@@ -15559,7 +15559,7 @@ $$H_0:  p_{old} &gt; p_{new}$$$$H_1: p_{old} &lt;= p_{new}$$
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>-0.002080742828015597</pre>
+<pre>-0.0008141826329592511</pre>
 </div>
 
 </div>
@@ -15605,8 +15605,8 @@ $$H_0:  p_{old} &gt; p_{new}$$$$H_1: p_{old} &lt;= p_{new}$$
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([ 0.00059674,  0.00240681,  0.00158089, ..., -0.00093803,
-       -0.00052532,  0.00089261])</pre>
+<pre>array([-8.41871999e-04,  1.02363840e-03, -1.40618790e-03, ...,
+        1.18164954e-03,  4.58869155e-05,  1.42267250e-03])</pre>
 </div>
 
 </div>
@@ -15649,7 +15649,7 @@ $$H_0:  p_{old} &gt; p_{new}$$$$H_1: p_{old} &lt;= p_{new}$$
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -15698,7 +15698,7 @@ $$H_0:  p_{old} &gt; p_{new}$$$$H_1: p_{old} &lt;= p_{new}$$
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.895</pre>
+<pre>0.8907</pre>
 </div>
 
 </div>
@@ -15736,7 +15736,7 @@ $$H_0:  p_{old} &gt; p_{new}$$$$H_1: p_{old} &lt;= p_{new}$$
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -16258,7 +16258,7 @@ $$H_0:  p_{old} &gt; p_{new}$$$$H_1: p_{old} &lt;= p_{new}$$
   <th>Date:</th>            <td>Tue, 15 Jun 2021</td> <th>  Pseudo R-squ.:     </th>  <td>8.077e-06</td> 
 </tr>
 <tr>
-  <th>Time:</th>                <td>08:47:53</td>     <th>  Log-Likelihood:    </th> <td>-1.0639e+05</td>
+  <th>Time:</th>                <td>10:17:06</td>     <th>  Log-Likelihood:    </th> <td>-1.0639e+05</td>
 </tr>
 <tr>
   <th>converged:</th>             <td>True</td>       <th>  LL-Null:           </th> <td>-1.0639e+05</td>
@@ -16833,34 +16833,13 @@ Name: country, dtype: int64</pre>
 
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>h. Though you have now looked at the individual factors of country and page on conversion, we would now like to look at an interaction between page and country to see if there significant effects on conversion.  Create the necessary additional columns, and fit the new model.</p>
-<p>Provide the summary results, and your conclusions based on the results.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Fit Your Linear Model And Obtain the Results</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">],</span> <span class="n">df_new</span><span class="p">[[</span><span class="s1">&#39;CA&#39;</span><span class="p">,</span> <span class="s1">&#39;UK&#39;</span><span class="p">]])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">],</span> <span class="n">df_new</span><span class="p">[[</span><span class="s1">&#39;intercept&#39;</span><span class="p">,</span><span class="s1">&#39;ab_page&#39;</span><span class="p">,</span><span class="s1">&#39;CA&#39;</span><span class="p">,</span> <span class="s1">&#39;UK&#39;</span><span class="p">]])</span>
 <span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 <span class="n">results</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
@@ -16883,7 +16862,7 @@ Name: country, dtype: int64</pre>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Optimization terminated successfully.
-         Current function value: 0.595341
+         Current function value: 0.366113
          Iterations 6
 </pre>
 </div>
@@ -16892,7 +16871,7 @@ Name: country, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
 
 
 
@@ -16903,33 +16882,39 @@ Name: country, dtype: int64</pre>
   <th>Dep. Variable:</th>       <td>converted</td>    <th>  No. Observations:  </th>   <td>290584</td>   
 </tr>
 <tr>
-  <th>Model:</th>                 <td>Logit</td>      <th>  Df Residuals:      </th>   <td>290582</td>   
+  <th>Model:</th>                 <td>Logit</td>      <th>  Df Residuals:      </th>   <td>290580</td>   
 </tr>
 <tr>
-  <th>Method:</th>                 <td>MLE</td>       <th>  Df Model:          </th>   <td>     1</td>   
+  <th>Method:</th>                 <td>MLE</td>       <th>  Df Model:          </th>   <td>     3</td>   
 </tr>
 <tr>
-  <th>Date:</th>            <td>Tue, 15 Jun 2021</td> <th>  Pseudo R-squ.:     </th>   <td>-0.6261</td>  
+  <th>Date:</th>            <td>Tue, 15 Jun 2021</td> <th>  Pseudo R-squ.:     </th>  <td>2.323e-05</td> 
 </tr>
 <tr>
-  <th>Time:</th>                <td>08:48:00</td>     <th>  Log-Likelihood:    </th> <td>-1.7300e+05</td>
+  <th>Time:</th>                <td>10:17:13</td>     <th>  Log-Likelihood:    </th> <td>-1.0639e+05</td>
 </tr>
 <tr>
   <th>converged:</th>             <td>True</td>       <th>  LL-Null:           </th> <td>-1.0639e+05</td>
 </tr>
 <tr>
-  <th>Covariance Type:</th>     <td>nonrobust</td>    <th>  LLR p-value:       </th>   <td> 1.000</td>   
+  <th>Covariance Type:</th>     <td>nonrobust</td>    <th>  LLR p-value:       </th>   <td>0.1760</td>   
 </tr>
 </table>
 <table class="simpletable">
 <tr>
-   <td></td>     <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+      <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
 <tr>
-  <th>CA</th> <td>   -2.0375</td> <td>    0.026</td> <td>  -78.364</td> <td> 0.000</td> <td>   -2.088</td> <td>   -1.987</td>
+  <th>intercept</th> <td>   -1.9893</td> <td>    0.009</td> <td> -223.763</td> <td> 0.000</td> <td>   -2.007</td> <td>   -1.972</td>
 </tr>
 <tr>
-  <th>UK</th> <td>   -1.9868</td> <td>    0.011</td> <td> -174.174</td> <td> 0.000</td> <td>   -2.009</td> <td>   -1.964</td>
+  <th>ab_page</th>   <td>   -0.0149</td> <td>    0.011</td> <td>   -1.307</td> <td> 0.191</td> <td>   -0.037</td> <td>    0.007</td>
+</tr>
+<tr>
+  <th>CA</th>        <td>   -0.0408</td> <td>    0.027</td> <td>   -1.516</td> <td> 0.130</td> <td>   -0.093</td> <td>    0.012</td>
+</tr>
+<tr>
+  <th>UK</th>        <td>    0.0099</td> <td>    0.013</td> <td>    0.743</td> <td> 0.457</td> <td>   -0.016</td> <td>    0.036</td>
 </tr>
 </table>
 </div>
@@ -16943,7 +16928,7 @@ Name: country, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
@@ -16962,14 +16947,16 @@ Name: country, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>CA    0.130350
-UK    0.137132
+<pre>intercept    0.136795
+ab_page      0.985168
+CA           0.960062
+UK           1.009932
 dtype: float64</pre>
 </div>
 
@@ -16982,16 +16969,23 @@ dtype: float64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>There's no significance effect on user convertion based on country from the above results</strong></p>
+<p><strong>Country has no significance effect on conversion based on the above results as their p-values are above 0.05</strong></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>h. Though you have now looked at the individual factors of country and page on conversion, we would now like to look at an interaction between page and country to see if there significant effects on conversion.  Create the necessary additional columns, and fit the new model.</p>
+<p>Provide the summary results, and your conclusions based on the results.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Fit Your Linear Model And Obtain the Results</span>
 </pre></div>
 
      </div>
@@ -16999,6 +16993,318 @@ dtype: float64</pre>
 </div>
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;ca_ab_page&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;CA&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;ab_page&#39;</span><span class="p">]</span>
+<span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;uk_ab_page&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;UK&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;ab_page&#39;</span><span class="p">]</span>
+<span class="n">df_new</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>timestamp</th>
+      <th>group</th>
+      <th>landing_page</th>
+      <th>converted</th>
+      <th>intercept</th>
+      <th>old_page</th>
+      <th>ab_page</th>
+      <th>CA</th>
+      <th>UK</th>
+      <th>ca_ab_page</th>
+      <th>uk_ab_page</th>
+    </tr>
+    <tr>
+      <th>user_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>834778</th>
+      <td>UK</td>
+      <td>2017-01-14 23:08:43.304998</td>
+      <td>control</td>
+      <td>old_page</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>928468</th>
+      <td>US</td>
+      <td>2017-01-23 14:44:16.387854</td>
+      <td>treatment</td>
+      <td>new_page</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>822059</th>
+      <td>UK</td>
+      <td>2017-01-16 14:04:14.719771</td>
+      <td>treatment</td>
+      <td>new_page</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>711597</th>
+      <td>UK</td>
+      <td>2017-01-22 03:14:24.763511</td>
+      <td>control</td>
+      <td>old_page</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>710616</th>
+      <td>UK</td>
+      <td>2017-01-16 13:14:44.000513</td>
+      <td>treatment</td>
+      <td>new_page</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">df_new</span><span class="p">[</span><span class="s1">&#39;converted&#39;</span><span class="p">],</span> <span class="n">df_new</span><span class="p">[[</span><span class="s1">&#39;intercept&#39;</span><span class="p">,</span><span class="s1">&#39;ab_page&#39;</span><span class="p">,</span><span class="s1">&#39;CA&#39;</span><span class="p">,</span> <span class="s1">&#39;UK&#39;</span><span class="p">,</span><span class="s1">&#39;ca_ab_page&#39;</span><span class="p">,</span><span class="s1">&#39;uk_ab_page&#39;</span><span class="p">]])</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">results</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Optimization terminated successfully.
+         Current function value: 0.366109
+         Iterations 6
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<table class="simpletable">
+<caption>Logit Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>       <td>converted</td>    <th>  No. Observations:  </th>   <td>290584</td>   
+</tr>
+<tr>
+  <th>Model:</th>                 <td>Logit</td>      <th>  Df Residuals:      </th>   <td>290578</td>   
+</tr>
+<tr>
+  <th>Method:</th>                 <td>MLE</td>       <th>  Df Model:          </th>   <td>     5</td>   
+</tr>
+<tr>
+  <th>Date:</th>            <td>Tue, 15 Jun 2021</td> <th>  Pseudo R-squ.:     </th>  <td>3.482e-05</td> 
+</tr>
+<tr>
+  <th>Time:</th>                <td>10:17:19</td>     <th>  Log-Likelihood:    </th> <td>-1.0639e+05</td>
+</tr>
+<tr>
+  <th>converged:</th>             <td>True</td>       <th>  LL-Null:           </th> <td>-1.0639e+05</td>
+</tr>
+<tr>
+  <th>Covariance Type:</th>     <td>nonrobust</td>    <th>  LLR p-value:       </th>   <td>0.1920</td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>intercept</th>  <td>   -1.9865</td> <td>    0.010</td> <td> -206.344</td> <td> 0.000</td> <td>   -2.005</td> <td>   -1.968</td>
+</tr>
+<tr>
+  <th>ab_page</th>    <td>   -0.0206</td> <td>    0.014</td> <td>   -1.505</td> <td> 0.132</td> <td>   -0.047</td> <td>    0.006</td>
+</tr>
+<tr>
+  <th>CA</th>         <td>   -0.0175</td> <td>    0.038</td> <td>   -0.465</td> <td> 0.642</td> <td>   -0.091</td> <td>    0.056</td>
+</tr>
+<tr>
+  <th>UK</th>         <td>   -0.0057</td> <td>    0.019</td> <td>   -0.306</td> <td> 0.760</td> <td>   -0.043</td> <td>    0.031</td>
+</tr>
+<tr>
+  <th>ca_ab_page</th> <td>   -0.0469</td> <td>    0.054</td> <td>   -0.872</td> <td> 0.383</td> <td>   -0.152</td> <td>    0.059</td>
+</tr>
+<tr>
+  <th>uk_ab_page</th> <td>    0.0314</td> <td>    0.027</td> <td>    1.181</td> <td> 0.238</td> <td>   -0.021</td> <td>    0.084</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>intercept     0.137178
+ab_page       0.979646
+CA            0.982625
+UK            0.994272
+ca_ab_page    0.954198
+uk_ab_page    1.031896
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>their p-values are above 0.05</strong>
+<strong>the influence on landing page in Canada is no different than the influence of the landing page in any country</strong> 
+<strong>the influence on landing page in UK is no different than the influence of the landing page in any country</strong></p>
+
+</div>
 </div>
 </body>
 
